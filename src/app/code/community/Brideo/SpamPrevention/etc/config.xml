@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Brideo_SpamPrevention>
+            <version>1.0.0</version>
+        </Brideo_SpamPrevention>
+    </modules>
+    <global>
+        <helpers>
+            <brideo_spamprevention>
+                <class>Brideo_SpamPrevention_Helper</class>
+            </brideo_spamprevention>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <brideo_spamprevention>
+                    <file>brideo_spamprevention.xml</file>
+                </brideo_spamprevention>
+            </updates>
+        </layout>
+        <routers>
+            <contacts>
+                <use>standard</use>
+                <args>
+                    <module>Brideo_SpamPrevention</module>
+                    <modules>
+                        <brideo_spamprevention>
+                            <class before="Mage_Contacts">Brideo_SpamPrevention_IndexController</class>
+                        </brideo_spamprevention>
+                    </modules>
+                </args>
+            </contacts>
+        </routers>
+    </frontend>
+</config>

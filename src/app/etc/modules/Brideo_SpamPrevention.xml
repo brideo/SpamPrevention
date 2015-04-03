@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Brideo_SpamPrevention>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Contacts/>
+            </depends>
+        </Brideo_SpamPrevention>
+    </modules>
+</config>
